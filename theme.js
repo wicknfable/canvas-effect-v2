@@ -112,9 +112,9 @@ export const Theme = {
    */
   lifecycle: {
     waveHorizonMs: 10000,
-    waveGapMinMs: 2400,
-    waveGapMaxMs: 4600,
-    maxActiveCells: 36,
+    waveGapMinMs: 2800,
+    waveGapMaxMs: 5200,
+    maxActiveCells: 31,
   },
 
   performance: {
