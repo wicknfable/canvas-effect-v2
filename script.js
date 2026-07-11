@@ -116,15 +116,15 @@ export function generateExtrusionWave(opts = {}) {
 
   const modeRoll = Math.random();
   const clusterCount =
-    modeRoll < 0.18 ? 1 :
-    modeRoll < 0.55 ? randInt(2, 3) :
-    modeRoll < 0.85 ? randInt(2, 4) :
-    randInt(3, 5);
+    modeRoll < 0.22 ? 1 :
+    modeRoll < 0.6 ? randInt(2, 3) :
+    modeRoll < 0.88 ? randInt(2, 3) :
+    randInt(2, 4);
 
   for (let c = 0; c < clusterCount; c++) {
     const originCi = randInt(-8, 8);
     const originCj = randInt(-6, 6);
-    const size = randInt(2, 8);
+    const size = randInt(2, 7);
     const radius = Math.random() < 0.35 ? 1 : Math.random() < 0.75 ? 2 : 3;
     const baseMs = Math.floor((c / Math.max(1, clusterCount)) * horizonMs * 0.55)
       + randInt(0, Math.floor(horizonMs * 0.25));
@@ -165,7 +165,7 @@ export function generateExtrusionWave(opts = {}) {
   /** @type {ScriptCell[]} */
   const scatter = [];
   if (Math.random() < 0.9 || byKey.size < 4) {
-    const scatterCount = randInt(3, 9);
+    const scatterCount = randInt(2, 7);
     for (let i = 0; i < scatterCount; i++) {
       const ci = randInt(-9, 9);
       const cj = randInt(-7, 7);
